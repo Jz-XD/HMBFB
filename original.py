@@ -350,7 +350,7 @@ def crack(idf,pwv):
 	bi = random.choice(['\33[m'])
 	pers = loop*100/len(id2)
 	fff = '%'
-	print('\r_crack_ %s%s/%s OK:%s/CP:%s %s%s%s'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x), end=' ');sys.stdout.flush()
+	print(f'\r_crack_ {asu}%s%s{N}/{m}%s{N} {H}OK{N}:{H}%s{N}/{K}CP{N}:{K}%s{N} {asu}%s%s%s{N}'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x), end=' ');sys.stdout.flush()
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen)
 	ses = requests.Session()
@@ -397,7 +397,7 @@ def crackfree(idf,pwv):
 	bi = random.choice(['\33[m'])
 	pers = loop*100/len(id2)
 	fff = '%'
-	print('\r_crack_ %s%s/%s OK:%s/CP:%s %s%s%s'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x), end=' ');sys.stdout.flush()
+	print(f'\r_crack_ {asu}%s%s{N}/{m}%s{N} {H}OK{N}:{H}%s{N}/{K}CP{N}:{K}%s{N} {asu}%s%s%s{N}'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x), end=' ');sys.stdout.flush()
 	ua = random.choice(ugen)
 	ses = requests.Session()
 	for pw in pwv:
