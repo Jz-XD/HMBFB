@@ -49,10 +49,10 @@ for xd in range(10000):
 
 
 	a='Mozilla/5.0 (Linux; Android'
-	b=random.choice(['10','11','12'])
-	c='RMX3031'
+	b=random.choice(['7','8','9','10','11','12'])
+	c='RMX2193'
 	d='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
-	e=random.randrange(70,103)
+	e=random.randrange(70,104)
 	f='0'
 	g=random.randrange(4200,4900)
 	h=random.randrange(60,210)
